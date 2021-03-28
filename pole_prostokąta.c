@@ -1,23 +1,57 @@
-/*Marcin Staśkiewicz Zadanie1*/
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+
+
 
 
 int main()
 {
-    float a;
-    float b;
-    float pole_prostokata;
+for(;;)
+{
+int c=68 ;
+int a;
+int b;
+int wynik;
+int pods;
+int h;
+int wynik2;
+int t;
+printf("wybierz cos\n");
+printf("1.pole ptostokata\n");
+printf("2.pole trojkata\n");
+printf("3. wyjscie\n");
+scanf("%d", &c);
+switch (c)
 
-    printf("podaj_a:");
-    scanf("%f:", &b);
+{
 
-    printf("podaj_b:");
-    scanf("%f:", &a);
+case 1:
 
-    pole_prostokata = (a*b);
-    printf("pole prostokąta wynosi : %f", pole_prostokata);
+    printf("wprowadz dlugosc boku a\n");
+    scanf("%d", &a);
+    printf("wprowadz dlugosc boku b\n");
+    scanf("%d", &b);
+    wynik = a*b;
+    printf("wynik=" "%d\n", wynik);
+
+    break;
+case 2:
+
+    printf("wprowadz dlugosc podstawy\n");
+    scanf("%d", &pods);
+    printf("wprowadz dlugosc wysokosci\n");
+    scanf("%d", &h);
+    wynik2 = 0.5*pods*h;
+    printf("wynik=" "%d\n", wynik2);
+    break;
+case 3:
+   return 0;
+default:
+  printf("Zly wybor\n");
+}
+
+
+}
     return 0;
+
 }
