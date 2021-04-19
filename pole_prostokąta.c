@@ -1,57 +1,68 @@
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-
-
-
-int main()
+int main ()
 {
-for(;;)
-{
-int c=68 ;
-int a;
-int b;
-int wynik;
-int pods;
-int h;
-int wynik2;
-int t;
-printf("wybierz cos\n");
-printf("1.pole ptostokata\n");
-printf("2.pole trojkata\n");
-printf("3. wyjscie\n");
-scanf("%d", &c);
-switch (c)
+    char liczba;
 
+
+    float a;
+    float b;
+    float h;
+    float pole_prostokata;
+    float pole_trojkata;
+
+
+
+
+    do
+    {
+    printf ("\nNacisnij 1 jesli chcesz obliczyc pole prostokata \nNacisnij 2 jesli chcesz obliczyc pole trojkata \nInna liczba = brak opcji\n");
+
+
+
+
+    scanf ("%d", &liczba);
+
+    switch(liczba)
 {
+
+
 
 case 1:
+    printf ("Podaj dlugosc boku a\n");
+    scanf ("%f", &a);
+    printf ("Podaj dlugosc boku b\n");
+    scanf ("%f", &b);
 
-    printf("wprowadz dlugosc boku a\n");
-    scanf("%d", &a);
-    printf("wprowadz dlugosc boku b\n");
-    scanf("%d", &b);
-    wynik = a*b;
-    printf("wynik=" "%d\n", wynik);
+    pole_prostokata = ((a*b));
 
-    break;
+    printf("Pole prostokata wynosi:%f\n", pole_prostokata);
+break;
+
 case 2:
 
-    printf("wprowadz dlugosc podstawy\n");
-    scanf("%d", &pods);
-    printf("wprowadz dlugosc wysokosci\n");
-    scanf("%d", &h);
-    wynik2 = 0.5*pods*h;
-    printf("wynik=" "%d\n", wynik2);
-    break;
-case 3:
-   return 0;
-default:
-  printf("Zly wybor\n");
+    printf ("Podaj dlugosc boku a\n");
+    scanf ("%f", &a);
+    printf ("Podaj wysokoœæ h\n");
+    scanf ("%f", &h);
+    pole_trojkata = (a * h)/2;
+    printf("Pole trojkata wynosi:%f\n", pole_trojkata);
+
+    default:
+        printf("\nBrak opcji\n");
+break;
 }
 
+    }while(liczba > 0);
 
-}
+
+
+
     return 0;
+
+
 
 }
